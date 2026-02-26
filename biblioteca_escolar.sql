@@ -7,6 +7,13 @@
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
+-- Crea la base de datos
+CREATE DATABASE biblioteca_escolar DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+USE biblioteca_escolar;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -20,8 +27,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `biblioteca_escolar`
 --
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `alumno`
