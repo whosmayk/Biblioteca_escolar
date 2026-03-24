@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2026 a las 02:47:29
+-- Tiempo de generación: 24-03-2026 a las 01:36:08
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `biblioteca_escolar`
 --
+
+-- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `alumno`
@@ -101,7 +103,7 @@ INSERT INTO `libro` (`id_libro`, `titulo`, `autor`, `isbn`, `estado`) VALUES
 (2, 'Cien años de soledad', 'Gabriel García Márquez', '978-0307474728', 'prestado'),
 (3, 'El Principito', 'Antoine de Saint-Exupéry', '978-0156013987', 'disponible'),
 (4, '1984', 'George Orwell', '978-0451524935', 'prestado'),
-(5, 'Crónica de una muerte anunciada', 'Gabriel García Márquez', '978-1400034956', 'disponible'),
+(5, 'Crónica de una muerte anunciada', 'Gabriel García Márquez', '978-1400034956', 'prestado'),
 (6, 'Rayuela', 'Julio Cortázar', '978-0307474735', 'disponible'),
 (7, 'La tregua', 'Mario Benedetti', '978-8420473130', 'prestado'),
 (8, 'Harry Potter y la piedra filosofal', 'J.K. Rowling', '978-8478884451', 'disponible'),
@@ -142,7 +144,8 @@ INSERT INTO `prestamo` (`id_prestamo`, `id_alumno`, `id_libro`, `id_bibliotecari
 (11, 12, 11, 1, '2026-02-26', '2026-03-05', '2026-02-26'),
 (12, 12, 11, 2, '2026-02-26', '2026-03-04', '2026-02-26'),
 (13, 12, 11, 3, '2026-02-26', '2026-03-03', '2026-02-26'),
-(14, 12, 11, 1, '2026-02-25', '2026-02-26', NULL);
+(14, 12, 11, 1, '2026-02-25', '2026-02-26', NULL),
+(15, 8, 5, 2, '2026-03-02', '2026-03-09', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -205,7 +208,7 @@ ALTER TABLE `libro`
 -- AUTO_INCREMENT de la tabla `prestamo`
 --
 ALTER TABLE `prestamo`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
